@@ -80,7 +80,7 @@ class Cryptopia {
     return executeRequest(options, requestDesc)
       .then((resp) => {
         if (resp.Error) {
-          throw new Error(resp.Error);
+          return Promise.reject(resp.Error);
         }
         return resp.Data;
       })
