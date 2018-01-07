@@ -1,25 +1,52 @@
 {
-    "name": "cryptopia",
-    "version": "0.0.1",
-    "description": "Node.js API wrapper to the Cryptopia bitcoin exchange",
-    "main": "index.js",
-    "dependencies": {
-        "request": "~2.67.0",
-        "underscore": "~1.8.3",
-        "crypto": "~0.0.3",
-        "verror": "~1.6.0",
-        "MD5": "~1.3.0"
-    },
-    "keywords": [
-        "api",
-        "exchange",
-        "cryptocurrency",
-        "bitcoin"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kwiksand/cryptopia"
-    },
-    "author": "Shannon Carver",
-    "license": "MIT"
+  "name": "@cbank/cryptopia",
+  "version": "0.0.2",
+  "description": "Node.js API wrapper to the Cryptopia bitcoin exchange",
+  "main": "dist/index.js",
+  "esnext": "src/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crypto-bank/cryptopia"
+  },
+  "contributors": [
+    "Shannon Carver",
+    "Łukasz Kurowski <crackcomm@gmail.com>"
+  ],
+  "keywords": [
+    "api",
+    "exchange",
+    "cryptocurrency",
+    "bitcoin"
+  ],
+  "dependencies": {
+    "request": "^2.83.0",
+    "underscore": "^1.8.3",
+    "verror": "^1.10.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^4.15.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "docs": "esdoc",
+    "lint": "eslint src",
+    "build": "babel src --out-dir dist",
+    "test": "babel-node test/test.js"
+  }
 }
