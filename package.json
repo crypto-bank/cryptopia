@@ -1,6 +1,6 @@
 {
   "name": "@cbank/cryptopia",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node.js API wrapper to the Cryptopia bitcoin exchange",
   "main": "dist/index.js",
   "esnext": "src/index.js",
